@@ -15,6 +15,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -47,6 +48,12 @@
     </div>
   </nav>
 
+    <% if notice %>
+      <div class="flash-notice"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="flash-alert"><%= alert %></div>
+    <% end %>
 
     <%= yield %>
   </body>

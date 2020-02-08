@@ -3,9 +3,6 @@ class SessionsController < ApplicationController
   def new
   end
 
-  def login
-  end
-
   def create
     user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password_digest])
@@ -15,8 +12,6 @@ class SessionsController < ApplicationController
       flash[:alert] = "Invalid email or password"
       render(:new)
     end
-
-    
   end
 
  def destroy
