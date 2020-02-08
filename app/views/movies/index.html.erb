@@ -1,2 +1,17 @@
 <h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+
+<% @movies.each do |movie| %>
+  <p>
+  <%= movie.trailer %>
+  </p>
+
+<p>
+<%= comment.body %>
+    -
+<%= link_to("edit", edit_comment_path(comment.id)) %>
+    -   
+<%= link_to("delete", comment_path(comment.id), method: :delete, data: {confirm: "Are you sure?"})%>
+  </p>
+
+<% end %>
+
