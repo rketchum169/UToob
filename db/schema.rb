@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_02_08_203405) do
+=======
+ActiveRecord::Schema.define(version: 2020_02_08_200431) do
+>>>>>>> 42931b86cbd7c433ab1729b947d9faef36aa9327
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_02_08_203405) do
     t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "role", default: 1
   end
 
 end
