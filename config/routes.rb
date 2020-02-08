@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: "movies#index"
+  get '/users/new', to: 'users#new'
   resources :movies 
   resources :comments
   resources :users, only: [:new, :create]
