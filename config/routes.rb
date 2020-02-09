@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   root to: "movies#index"
   get '/users/new', to: 'users#new'
   resources :movies 
@@ -11,5 +12,8 @@ Rails.application.routes.draw do
   get 'sessions/login'
   get 'sessions/welcome'
   get 'authorized', to: 'session#page_requires_login'
+=======
+  get 'comments/new'
+>>>>>>> parent of 9b3d794... added in the user views
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
